@@ -24,6 +24,7 @@ public class Projecte {
         double preu;
         boolean tapa = false;
         int opcio, any;
+        boolean omplit = false;
         
             System.out.println("--------MENÚ--------");
             System.out.println("0. Sortir");
