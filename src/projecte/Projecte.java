@@ -37,16 +37,16 @@ public class Projecte {
             case 0:
                 break;
             case 1:
-                System.out.println("1");
+                System.out.println("un");
                 break;
             case 2:
-                System.out.println("2");
+                System.out.println("dos");
                 break;
             case 3:
-                System.out.println("3");
+                System.out.println("tres");
                 break;
             case 4:
-                System.out.println("4");
+                System.out.println("quatre");
                 break;
             default:
                 System.out.println("Has d'introduir una opció vàlida!");
