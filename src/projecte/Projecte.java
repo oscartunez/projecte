@@ -22,7 +22,7 @@ public class Projecte {
         String model=null;
         String luthier=null;
         double preu;
-        boolean tapa_unica = false;
+        boolean tapa = false;
         int opcio, any;
         
             System.out.println("--------MENÚ--------");
@@ -50,7 +50,7 @@ public class Projecte {
                 break;
             default:
                 System.out.println("Has d'introduir una opció vàlida!");
-                
+              
         }
     }
 }
