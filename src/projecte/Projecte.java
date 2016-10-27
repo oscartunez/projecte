@@ -23,9 +23,10 @@ public class Projecte {
         String luthier=null;
         double preu;
         boolean tapa = false;
-        int opcio, any;
+        int opcio = 5, any;
         boolean omplit = false;
         
+        while (!(opcio == 0)) {
             System.out.println("--------MENÚ--------");
             System.out.println("0. Sortir");
             System.out.println("1. Afegir violí");
@@ -38,7 +39,9 @@ public class Projecte {
             case 0:
                 break;
             case 1:
-                System.out.println("un");
+                System.out.println("1.");
+                System.out.println("Introdueix les dades del violí.");
+                
                 break;
             case 2:
                 System.out.println("dos");
@@ -52,6 +55,7 @@ public class Projecte {
             default:
                 System.out.println("Has d'introduir una opció vàlida!");
               
+        }
         }
     }
 }
