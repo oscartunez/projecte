@@ -22,9 +22,8 @@ public class Projecte {
         String model=null;
         String luthier=null;
         double preu;
-        boolean tapa = false;
+        boolean tapa = false, omplit = false;
         int opcio = 5, any;
-        boolean omplit = false;
         
         while (!(opcio == 0)) {
             System.out.println("--------MENÚ--------");
@@ -40,8 +39,12 @@ public class Projecte {
                 break;
             case 1:
                 System.out.println("1.");
-                System.out.println("Introdueix les dades del violí.");
-                
+                System.out.println("Introducció de les dades del violí.");
+                System.out.println("Model:");
+                System.out.println("Luthier:");
+                System.out.println("Any:");
+                System.out.println("Preu");
+                System.out.println("Tapa única:");
                 break;
             case 2:
                 System.out.println("dos");
