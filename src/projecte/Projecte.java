@@ -24,7 +24,7 @@ public class Projecte {
         double preu=0;
         boolean tapa = false, omplit = false;
         int opcio = 5, any=0;
-        char esTapa=' ';
+        char esTapa = ' ';
         
         while (!(opcio == 0)) {
             System.out.println("--------MENÚ--------");
@@ -49,11 +49,12 @@ public class Projecte {
                     any=ent.nextInt();
                     System.out.println("Introdueix el preu.");
                     preu=in.nextDouble();
-                    System.out.println("És de tapa única? (S/N)");
+                    System.out.println("És de tapa única? (Si/No)");
                         do {
                             esTapa = ent.nextLine().toUpperCase().charAt(0);
-                        }while(esTapa != 'S' && esTapa != 'N');
+                        } while (esTapa != 'S' && esTapa != 'N');
                         tapa = (esTapa == 'S');
+                        
                     omplit=true;
                     break;
                 } else {
