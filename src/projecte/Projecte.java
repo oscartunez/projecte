@@ -61,7 +61,13 @@ public class Projecte {
                     System.out.println("Ja has introduit les dades, si en vols tornar a introduir, borra-les primer.");
                 }
             case 2:
-                System.out.println("dos");
+                System.out.println("Borrant les dades...");
+                model = null;
+                luthier = null;
+                any = 0;
+                preu = 0;
+                tapa = false;
+                omplit=false;
                 break;
             case 3:
                 System.out.println("tres");
