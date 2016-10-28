@@ -19,9 +19,8 @@ public class Projecte {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner ent=new Scanner(System.in);
-        Scanner in=new Scanner(System.in);
         String model = null, luthier = null;
-        double preu=0;
+        double preu = 0;
         boolean tapa = false, omplit = false;
         int opcio = 5, any=0;
         char esTapa = ' ';
@@ -48,7 +47,7 @@ public class Projecte {
                     System.out.println("Introdueix l'any.");
                     any=ent.nextInt();
                     System.out.println("Introdueix el preu.");
-                    preu=in.nextDouble();
+                    preu=ent.nextDouble();
                     System.out.println("És de tapa única? (Si/No)");
                         do {
                             esTapa = ent.nextLine().toUpperCase().charAt(0);
