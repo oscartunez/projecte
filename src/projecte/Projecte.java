@@ -21,9 +21,9 @@ public class Projecte {
         Scanner ent=new Scanner(System.in);
         String model = null, luthier = null;
         double preu = 0;
-        boolean tapa = false, omplit = false;
+        boolean tapa = false, omplit = false, llista = false, borrar = false;
         int opcio = 5, any=0;
-        char esTapa = ' ';
+        char esTapa = ' ', esLlista = ' ', esBorrar = ' ';
         
         while (!(opcio == 0)) {
             System.out.println("--------MENÚ--------");
@@ -32,7 +32,7 @@ public class Projecte {
             System.out.println("2. Borrar violí");
             System.out.println("3. Modificar violí");
             System.out.println("4. Llistar violins");
-            opcio=ent.nextInt();
+            opcio=ent.skip("[\r\n]*").nextInt();
         
         switch (opcio) {
             case 0:
@@ -45,12 +45,12 @@ public class Projecte {
                     System.out.println("Introdueix el luthier.");
                     luthier = ent.skip("[\r\n]*").nextLine();
                     System.out.println("Introdueix l'any.");
-                    any=ent.nextInt();
+                    any=ent.skip("[\r\n]*").nextInt();
                     System.out.println("Introdueix el preu.");
-                    preu=ent.nextDouble();
+                    preu=ent.skip("[\r\n]*").nextDouble();
                     System.out.println("És de tapa única? (Si/No)");
                         do {
-                            esTapa = ent.nextLine().toUpperCase().charAt(0);
+                            esTapa = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
                         } while (esTapa != 'S' && esTapa != 'N');
                         tapa = (esTapa == 'S');
                         
@@ -60,19 +60,37 @@ public class Projecte {
                     System.out.println("Ja has introduit les dades, si en vols tornar a introduir, borra-les primer.");
                 }
             case 2:
-                System.out.println("Borrant les dades...");
-                model = null;
-                luthier = null;
-                any = 0;
-                preu = 0;
-                tapa = false;
-                omplit=false;
+                if (omplit != false) {
+                    
+                    System.out.println("Vols veure les dades? (S/N)");
+                    do {
+                        esLlista = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
+                    }while (esLlista !='S' && esLlista !='N');
+                    esLlista = 'S';
+                    System.out.println("Model: "+model);
+                    System.out.println("Luthier: "+luthier);
+                    System.out.println("Any: "+any);
+                    System.out.println("Preu: "+preu);
+                    System.out.println("Tapa única? "+tapa);
+                    System.out.println("Segur que el vols borrar? (S/N)");
+                    do {
+                        esBorrar = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
+                    }while (esBorrar !='S' && esBorrar !='N');
+                    esBorrar = 'S';
+                    model = null;
+                    luthier = null;
+                    any = 0;
+                    preu = 0;
+                    tapa = false;
+                    omplit = false;
+                } else {
+                    System.out.println("No hi ha dades a borrar!");
+                }
                 break;
             case 3:
                 System.out.println("tres");
                 break;
             case 4:
-                System.out.println("Violí 1:");
                 System.out.println("Model: "+model);
                 System.out.println("Luthier: "+luthier);
                 System.out.println("Any: "+any);
