@@ -99,7 +99,7 @@ public class Projecte {
                     System.out.println("Preu: "+preu);
                     System.out.println("Tapa única? "+tapa);
                 } else {
-                    System.out.println("No hi ha dades a mostrar");
+                    System.out.println("No hi ha dades a mostrar!");
                 }             
                 break;
             default:
