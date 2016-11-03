@@ -21,9 +21,9 @@ public class Projecte {
         Scanner ent=new Scanner(System.in);
         String model = null, luthier = null;
         double preu = 0;
-        boolean tapa = false, omplit = false, llista = false, borrar = false, modificar = false, models = false, luthiers = false, anys = false, preus = false, tapes = false;
+        boolean tapa = false, omplit = false, llista = false, borrar = false, modificar = false;
         int opcio = 5, any=0;
-        char esTapa = ' ', esLlista = ' ', esBorrar = ' ', esModificar = ' ', esModels = ' ', esLuthiers = ' ', esAnys = ' ', esPreus = ' ', esTapes;
+        char esTapa = ' ', esLlista = ' ', esBorrar = ' ', esModificar = ' ';
         
         while (!(opcio == 0)) {
             System.out.println("--------MENÚ--------");
@@ -107,9 +107,9 @@ public class Projecte {
                 System.out.println(model);
                 System.out.println("Vols modificar el model? (S/N)");
                 do {
-                    esModels = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
-                }while (esModels !='S' && esModels !='N');
-                esModels = 'S';
+                    esModificar = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
+                }while (esModificar !='S' && esModificar !='N');
+                esModificar = 'S';
                 System.out.println("Introdueix el nou model.");
                 model = ent.skip("[\r\n]*").nextLine();
                 do {
@@ -119,9 +119,9 @@ public class Projecte {
                 System.out.println(luthier);
                 System.out.println("Vols modificar el luthier? (S/N)");
                 do {
-                    esLuthiers = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
-                }while (esLuthiers !='S' && esLuthiers !='N');
-                esLuthiers = 'S';
+                    esModificar = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
+                }while (esModificar !='S' && esModificar !='N');
+                esModificar = 'S';
                 System.out.println("Introdueix el nou luthier.");
                 luthier = ent.skip("[\r\n]*").nextLine();
                 do {
@@ -131,9 +131,9 @@ public class Projecte {
                 System.out.println(any);
                 System.out.println("Vols modificar l'any? (S/N)");
                 do {
-                    esAnys = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
-                }while (esAnys !='S' && esAnys !='N');
-                esAnys = 'S';
+                    esModificar = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
+                }while (esModificar !='S' && esModificar !='N');
+                esModificar = 'S';
                 System.out.println("Introdueix el nou any.");
                 any=ent.skip("[\r\n]*").nextInt();
                 do {
@@ -143,9 +143,9 @@ public class Projecte {
                 System.out.println(preu);
                 System.out.println("Vols modificar el preu? (S/N)");
                 do {
-                    esPreus = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
-                }while (esPreus !='S' && esPreus !='N');
-                esPreus = 'S';
+                    esModificar = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
+                }while (esModificar !='S' && esModificar !='N');
+                esModificar = 'S';
                 System.out.println("Introdueix el nou any.");
                 preu=ent.skip("[\r\n]*").nextDouble();
                 do {
@@ -155,9 +155,9 @@ public class Projecte {
                 System.out.println(tapa);
                 System.out.println("Vols modificar si és de tapa única o doble? (S/N)");
                 do {
-                    esTapes = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
-                }while (esTapes !='S' && esTapes !='N');
-                esTapes = 'S';
+                    esModificar = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
+                }while (esModificar !='S' && esModificar !='N');
+                esModificar = 'S';
                 System.out.println("Introdueix si és de tapa única o no.");
                     do {
                             esTapes = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
