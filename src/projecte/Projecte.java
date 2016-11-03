@@ -21,9 +21,9 @@ public class Projecte {
         Scanner ent=new Scanner(System.in);
         String model = null, luthier = null;
         double preu = 0;
-        boolean tapa = false, omplit = false, llista = false, borrar = false;
+        boolean tapa = false, omplit = false, llista = false, borrar = false, modificar = false, models = false, luthiers = false, anys = false, preus = false, tapes = false;
         int opcio = 5, any=0;
-        char esTapa = ' ', esLlista = ' ', esBorrar = ' ';
+        char esTapa = ' ', esLlista = ' ', esBorrar = ' ', esModificar = ' ', esModels = ' ', esLuthiers = ' ', esAnys = ' ', esPreus = ' ', esTapes;
         
         while (!(opcio == 0)) {
             System.out.println("--------MENÚ--------");
@@ -62,7 +62,7 @@ public class Projecte {
             case 2:
                 if (omplit != false) {
                     
-                    System.out.println("Vols veure les dades? (S/N)");
+                    System.out.println("Vols veure les dades del violí? (S/N)");
                     do {
                         esLlista = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
                     }while (esLlista !='S' && esLlista !='N');
@@ -84,12 +84,92 @@ public class Projecte {
                     tapa = false;
                     omplit = false;
                     System.out.println("Violí borrat correctament!");
-                } else {
+                    esBorrar = 'N';
                     System.out.println("No hi ha dades a borrar!");
                 }
                 break;
             case 3:
-                System.out.println("tres");
+                System.out.println("Vols veure les dades del violí? (S/N)");
+                do {
+                    esLlista = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
+                }while (esLlista !='S' && esLlista !='N');
+                esLlista = 'S';
+                System.out.println("Model: "+model);
+                System.out.println("Luthier: "+luthier);
+                System.out.println("Any: "+any);
+                System.out.println("Preu: "+preu);
+                System.out.println("Tapa única? "+tapa);
+                System.out.println("Vols modificar les dades? (S/N)");
+                do {
+                    esModificar = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
+                }while (esModificar !='S' && esModificar !='N');
+                esModificar = 'S';
+                System.out.println(model);
+                System.out.println("Vols modificar el model? (S/N)");
+                do {
+                    esModels = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
+                }while (esModels !='S' && esModels !='N');
+                esModels = 'S';
+                System.out.println("Introdueix el nou model.");
+                model = ent.skip("[\r\n]*").nextLine();
+                do {
+                    esModificar = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
+                }while (esModificar !='S' && esModificar !='N');
+                esModificar = 'S';
+                System.out.println(luthier);
+                System.out.println("Vols modificar el luthier? (S/N)");
+                do {
+                    esLuthiers = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
+                }while (esLuthiers !='S' && esLuthiers !='N');
+                esLuthiers = 'S';
+                System.out.println("Introdueix el nou luthier.");
+                luthier = ent.skip("[\r\n]*").nextLine();
+                do {
+                    esModificar = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
+                }while (esModificar !='S' && esModificar !='N');
+                esModificar = 'S';
+                System.out.println(any);
+                System.out.println("Vols modificar l'any? (S/N)");
+                do {
+                    esAnys = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
+                }while (esAnys !='S' && esAnys !='N');
+                esAnys = 'S';
+                System.out.println("Introdueix el nou any.");
+                any=ent.skip("[\r\n]*").nextInt();
+                do {
+                    esModificar = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
+                }while (esModificar !='S' && esModificar !='N');
+                esModificar = 'S';
+                System.out.println(preu);
+                System.out.println("Vols modificar el preu? (S/N)");
+                do {
+                    esPreus = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
+                }while (esPreus !='S' && esPreus !='N');
+                esPreus = 'S';
+                System.out.println("Introdueix el nou any.");
+                preu=ent.skip("[\r\n]*").nextDouble();
+                do {
+                    esModificar = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
+                }while (esModificar !='S' && esModificar !='N');
+                esModificar = 'S';
+                System.out.println(tapa);
+                System.out.println("Vols modificar si és de tapa única o doble? (S/N)");
+                do {
+                    esTapes = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
+                }while (esTapes !='S' && esTapes !='N');
+                esTapes = 'S';
+                System.out.println("Introdueix si és de tapa única o no.");
+                    do {
+                            esTapes = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
+                        } while (esTapes != 'S' && esTapes != 'N');
+                        tapes = (esTapes == 'S');
+                
+                System.out.println("Mostrant les noves dades...");
+                System.out.println("Model: "+models);
+                System.out.println("Luthier: "+luthiers);
+                System.out.println("Any: "+anys);
+                System.out.println("Preu: "+preus);
+                System.out.println("Tapa única? "+tapes);
                 break;
             case 4:
                 if (omplit != false) {
