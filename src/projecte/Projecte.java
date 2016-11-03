@@ -83,6 +83,7 @@ public class Projecte {
                     preu = 0;
                     tapa = false;
                     omplit = false;
+                    System.out.println("Violí borrat correctament!");
                 } else {
                     System.out.println("No hi ha dades a borrar!");
                 }
@@ -91,11 +92,15 @@ public class Projecte {
                 System.out.println("tres");
                 break;
             case 4:
-                System.out.println("Model: "+model);
-                System.out.println("Luthier: "+luthier);
-                System.out.println("Any: "+any);
-                System.out.println("Preu: "+preu);
-                System.out.println("Tapa única? "+tapa);
+                if (omplit != false) {
+                    System.out.println("Model: "+model);
+                    System.out.println("Luthier: "+luthier);
+                    System.out.println("Any: "+any);
+                    System.out.println("Preu: "+preu);
+                    System.out.println("Tapa única? "+tapa);
+                } else {
+                    System.out.println("No hi ha dades a mostrar");
+                }             
                 break;
             default:
                 System.out.println("Has d'introduir una opció vàlida!");
